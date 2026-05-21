@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 ">
+    {# <div class = "container-fluid"> #}
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+            <li class="nav-item">
+                <a class="nav-link {{ app.current_route == 'home' ? 'active' : '' }}" href={{ path('home') }}>RecetteVie</a>
+            </li>
+            <li class="nav-item">
+                 <a class="nav-link {{ app.current_route == 'home' ? 'active' : '' }}" href={{ path('home') }}>Acceuil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ app.current_route starts with 'app_recipe_' ? 'active' : '' }}" href={{ path('app_recipe_index') }}>Liste des Recettes</a>
+            </li>
+        <ul>
+    </div>
+</nav>

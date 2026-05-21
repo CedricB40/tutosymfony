@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ recipe.slug }}{% endblock %}
+
+{% block body %}
+    <h1>Bienvenu sur la recette numéro {{ recipe.id }}</h1>
+    <h4>Comment faire un/une {{ recipe.title | title }}</h4>
+    <p>Temps de préparation : {{ recipe.duration }} min</p>
+    <p>{{ recipe.content }} </p>
+    {# <p>Créé le {{ recipe.createdAt }} </p>
+    <p>Modifié le {{ recipe.updatedAt }} </p> #}
+    
+    {# <p>Recette crée par {{ user.firstname }} {{ user.lastname }}</p> #}
+    {# {{ dump(app.current_route) }} #}
+    {# <p>Recette crée par {{ user.firstname ~" "~ user.lastname }}</p> #}
+{% endblock %}

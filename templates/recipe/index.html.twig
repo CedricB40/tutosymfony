@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{# {% block title %}Liste des recettes{% endblock %} #}
+{# is the same théorie #}
+
+{# {% block title %}Liste des Recettes{% endblock %} #}
+{% block title "Liste des Recettes" %}
+
+{% block body %}
+    <h1>Voici la liste des Recettes</h1>
+    <ul>
+        {# {{ dump(recipes) }} #}
+        {% for recipe in recipes %}
+            <li>
+                <a href={{ path('app_recipe_show', {id: recipe.id, slug: recipe.slug}) }}>{{ recipe.title }}</a>
+            </li>
+        {% else %}
+            <p>
+                Liste recette vide
+            </p>
+        {% endfor %}
+    </ul>
+{% endblock %}
